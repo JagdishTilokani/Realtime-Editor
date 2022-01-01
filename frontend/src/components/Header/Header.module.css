@@ -1,0 +1,26 @@
+.header {
+    background-color: black;
+    height: 60px;
+}
+
+.header-container {
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+.navbar-list {
+    list-style: none;
+    display: flex;
+}
+
+.navbar-list li {
+    margin: 0 15px;
+}

@@ -1,12 +1,12 @@
 import React from "react";
-import MenuBar from "./MenuBar/MenuBar";
-import CodeSection from "./CodeSection/CodeSection";
+import Menubar from "./MenuBar/MenuBar";
+import Codesection from "./CodeSection/CodeSection";
 
 const Editor = () => {
     return (
         <React.Fragment>
-            <MenuBar />
-            <CodeSection />
+            <Menubar />
+            <Codesection />
         </React.Fragment>
     );
 };

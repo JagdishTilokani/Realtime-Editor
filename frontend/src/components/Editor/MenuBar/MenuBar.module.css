@@ -1,0 +1,15 @@
+.menubar {
+    background-color: rgb(230, 224, 224);
+    height: 45px;
+}
+
+.menubar-container {
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.theme-selection, .language-selection {
+    /* border-radius: 3px; */
+}
