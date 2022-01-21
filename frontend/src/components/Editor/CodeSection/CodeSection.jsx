@@ -4,7 +4,6 @@ import "ace-builds/webpack-resolver";
 import "ace-builds/src-noconflict/ext-language_tools"
 import io from "socket.io-client";
 // import styles from "./CodeSection.module.css";
-
 class Codesection extends Component {
     shouldChange = true;
 
@@ -22,10 +21,14 @@ class Codesection extends Component {
             if (change.action === "insert") {
                 let text = "\n";
                 if (change.lines.length === 1) text = change.lines[0];
-                editor.session.insert(
-                    { row: change.start.row, column: change.start.column },
+                editor.session.insert({ row: change.start.row, column: change.start.column },
                     text
                 );
+            } else if (change.action === "remove") {
+                editor.session.remove({
+                    start: change.start,
+                    end: change.end
+                });
             }
             this.shouldChange = true;
         });
@@ -43,24 +46,26 @@ class Codesection extends Component {
     };
 
     render() {
-        return (
-            <AceEditor
-                // className={styles.editor}
-                ref={this.state.editor}
-                placeholder="// Write your code here"
-                onChange={this.handleChange}
-                mode={"html"}
-                fontSize={25}
-                setOptions={{
+        return ( <
+            AceEditor
+            // className={styles.editor}
+            ref = { this.state.editor }
+            placeholder = "// Write your code here"
+            onChange = { this.handleChange }
+            mode = { "html" }
+            fontSize = { 25 }
+            setOptions = {
+                {
                     enableBasicAutocompletion: true,
                     enableLiveAutocompletion: true,
                     enableSnippets: true,
                     showPrintMargin: false,
-                }}
-                theme={"clouds_midnight"}
-                width="100%"
-                height="100vh"
-            />
+                }
+            }
+            theme = { "clouds_midnight" }
+            width = "100%"
+            height = "100vh" /
+            >
         );
     }
 }
