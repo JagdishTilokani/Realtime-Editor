@@ -1,12 +1,12 @@
 import React from "react";
 import Menubar from "./MenuBar/MenuBar";
-import Codesection from "./CodeSection/CodeSection";
+import CodeChatSection from "./CodeChatSection/CodeChatSection";
 
 const Editor = () => {
     return (
         <React.Fragment>
             <Menubar />
-            <Codesection />
+            <CodeChatSection />
         </React.Fragment>
     );
 };

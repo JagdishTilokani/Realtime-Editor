@@ -1,0 +1,23 @@
+.chat {
+    width: 30%;
+    height: 100vh;
+}
+
+.send-message {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.type-box {
+    background-color: rgb(201, 197, 197);
+    border-radius: 10px;
+    height: 40px;
+    width: 20%;
+}
+
+.send-btn {
+    font-size: 30px;  
+    cursor: pointer;  
+}

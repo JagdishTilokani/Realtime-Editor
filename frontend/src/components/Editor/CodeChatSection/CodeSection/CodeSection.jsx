@@ -52,7 +52,7 @@ class Codesection extends Component {
             ref = { this.state.editor }
             placeholder = "// Write your code here"
             onChange = { this.handleChange }
-            mode = { "html" }
+            mode = { "c_cpp" }
             fontSize = { 25 }
             setOptions = {
                 {
