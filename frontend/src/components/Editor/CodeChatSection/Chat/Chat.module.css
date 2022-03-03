@@ -1,23 +1,41 @@
 .chat {
-    width: 30%;
-    height: 100vh;
+    background-color: white;
+    display: flex;
+    max-width: 300px;
+    border-radius: 8px;
+    margin: 10px 10px;
+    padding: 10px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.msg-container {
+    margin: 10px 0;
+    overflow-wrap: break-word;
+}
+
+.sender {
+    font-weight: bold;
 }
 
 .send-message {
+    padding: 5px 10px;
     display: flex;
-    position: fixed;
-    bottom: 0;
+    box-sizing: border-box;
+    justify-content: space-between;
+    background-color: rgb(201, 197, 197);
     width: 100%;
+    border-radius: 20px;
 }
 
 .type-box {
+    border: 0;
+    outline: none;
+    width: 250px;
     background-color: rgb(201, 197, 197);
-    border-radius: 10px;
-    height: 40px;
-    width: 20%;
 }
 
 .send-btn {
-    font-size: 30px;  
-    cursor: pointer;  
+    font-size: 20px;
+    cursor: pointer;
 }

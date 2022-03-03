@@ -2,13 +2,16 @@ import React, { Component } from "react";
 import styles from "./CodeChatSection.module.css";
 import CodeSection from "./CodeSection/CodeSection";
 import Chat from "./Chat/Chat";
+import io from "socket.io-client";
 
 class Codechatsection extends Component {
+    socket = this.props.socket;
+
     render() {
         return (
             <div className={styles["code-chat"]}>
-                <CodeSection />
-                <Chat />
+                <CodeSection socket={this.socket} />
+                <Chat socket={this.socket} />
             </div>
         );
     }

@@ -5,10 +5,10 @@ import Header from "./components/Header/Header";
 
 function App() {
     return (
-        <React.Fragment>
+        <div className=".App">
             <Header />
             <Editor />
-        </React.Fragment>
+        </div>
     );
 }
 

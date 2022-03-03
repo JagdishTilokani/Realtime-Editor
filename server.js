@@ -16,4 +16,12 @@ io.on("connection", (socket) => {
     socket.on("change", (change) => {
         socket.broadcast.emit("change", change);
     });
+
+    socket.on("message", (message) => {
+        io.sockets.emit("message", message);
+    });
+
+    socket.on("audio", (audio) => {
+        socket.broadcast.emit("audio", audio);
+    });
 });
