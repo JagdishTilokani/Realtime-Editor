@@ -1,0 +1,49 @@
+.account {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.account-form {
+    margin: 15px auto;
+    background-color: white;
+    border-radius: 5px;
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.account-form div {
+    width: 100%;
+}
+
+.input {
+    margin-top: 15px;
+    padding: 5px;
+    height: 35px;
+    min-width: 350px;
+    width: 100%;
+    border: none;
+    letter-spacing: 1px;
+    font-size: 18px;
+    background-color: rgb(228, 233, 238);
+}
+
+.submit {
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 1000;
+    color: white;
+}
+
+.error {
+    color: red;
+}
+
+/* main page */
+.main-page {
+    width: 100%;
+}

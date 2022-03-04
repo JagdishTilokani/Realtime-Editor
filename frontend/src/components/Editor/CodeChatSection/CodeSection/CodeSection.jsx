@@ -10,6 +10,7 @@ class Codesection extends Component {
         socket: this.props.socket,
         editor: React.createRef(),
         random: 0,
+        text: "",
     };
 
     componentDidMount = () => {
@@ -40,16 +41,16 @@ class Codesection extends Component {
     handleChange = (data, change) => {
         if (this.shouldChange) this.state.socket.emit("change", change);
         console.log(change);
+        this.setState({ text: data });
     };
 
     render() {
         return (
             <AceEditor
-                // className={styles.editor}
                 ref={this.state.editor}
                 placeholder="// Write your code here"
                 onChange={this.handleChange}
-                mode={"html"}
+                mode={this.props.lang}
                 fontSize={25}
                 setOptions={{
                     enableBasicAutocompletion: true,
@@ -57,9 +58,10 @@ class Codesection extends Component {
                     enableSnippets: true,
                     showPrintMargin: false,
                 }}
-                theme={"clouds_midnight"}
+                theme={this.props.theme}
                 width="100%"
                 height="100vh"
+                value={this.state.text}
             />
         );
     }

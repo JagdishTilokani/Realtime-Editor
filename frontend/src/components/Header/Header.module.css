@@ -21,6 +21,12 @@
     display: flex;
 }
 
-.navbar-list li {
+/* .navbar-list li {
     margin: 0 15px;
+} */
+
+.link {
+    padding: 10px;
+    color: white;
+    text-decoration: none;
 }

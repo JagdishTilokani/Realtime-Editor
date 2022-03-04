@@ -1,12 +1,15 @@
 import React, { Component } from "react";
 import styles from "./Chat.module.css";
 
+let user = localStorage.getItem("user");
+if (user) user = JSON.parse(user);
+
 class Chat extends Component {
     state = {
         messages: [],
         typed: "",
         socket: this.props.socket,
-        username: "user",
+        username: user ? user.userName : "user",
     };
 
     componentDidMount = () => {

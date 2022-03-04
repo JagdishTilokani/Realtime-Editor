@@ -10,7 +10,11 @@ class Codechatsection extends Component {
     render() {
         return (
             <div className={styles["code-chat"]}>
-                <CodeSection socket={this.socket} />
+                <CodeSection
+                    socket={this.socket}
+                    theme={this.props.theme}
+                    lang={this.props.lang}
+                />
                 <Chat socket={this.socket} />
             </div>
         );

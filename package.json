@@ -18,7 +18,10 @@
     },
     "homepage": "https://github.com/JagdishTilokani/Realtime-Editor#readme",
     "dependencies": {
+        "bcrypt": "^5.0.1",
         "express": "^4.17.2",
-        "socket.io": "^4.4.1"
+        "mongoose": "^6.0.8",
+        "socket.io": "^4.4.1",
+        "validator": "^13.7.0"
     }
 }
