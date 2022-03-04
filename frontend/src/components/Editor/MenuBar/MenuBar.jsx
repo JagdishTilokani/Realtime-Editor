@@ -1,5 +1,4 @@
 import React from "react";
-// import io from "socket.io-client";
 import styles from "./MenuBar.module.css";
 
 const Menubar = (props) => {
@@ -50,14 +49,15 @@ const Menubar = (props) => {
                         Language:{" "}
                     </label>
                     <select
+                        onChange={(event) => props.changeLang(event.target.value)}
                         name="languages"
                         id="languages"
                         className={`btn ${styles["language-selection"]}`}
                     >
-                        <option value="">Html</option>
-                        <option value="">Javascript</option>
-                        <option value="">C</option>
-                        <option value="">Python</option>
+                        <option value="html">Html</option>
+                        <option value="javascript">Javascript</option>
+                        <option value="c_cpp">C</option>
+                        <option value="python">Python</option>
                     </select>
                 </div>
                 <div>
@@ -65,15 +65,16 @@ const Menubar = (props) => {
                         Theme:{" "}
                     </label>
                     <select
+                        onChange={(event) => props.changeTheme(event.target.value)}
                         name="themes"
                         id="themes"
                         className={`btn ${styles["theme-selection"]}`}
                     >
-                        <option value="">clouds_midnight</option>
-                        <option value="">Solarized_dark</option>
-                        <option value="">Chrome</option>
-                        <option value="">Monokai</option>
-                        <option value="">Solarized_light</option>
+                        <option value="clouds_midnight">clouds_midnight</option>
+                        <option value="solarized_dark">Solarized_dark</option>
+                        <option value="chrome">Chrome</option>
+                        <option value="monokai">Monokai</option>
+                        <option value="solarized_light">Solarized_light</option>
                     </select>
                 </div>
                 <div className="btn">Copy</div>

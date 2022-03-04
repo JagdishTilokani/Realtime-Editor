@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import styles from "./CodeChatSection.module.css";
 import CodeSection from "./CodeSection/CodeSection";
 import Chat from "./Chat/Chat";
-import io from "socket.io-client";
 
 class Codechatsection extends Component {
     socket = this.props.socket;

@@ -12,6 +12,7 @@ class Editor extends Component {
     };
 
     changeTheme = (theme) => {
+        console.log(theme);
         this.setState({ theme });
     };
 
